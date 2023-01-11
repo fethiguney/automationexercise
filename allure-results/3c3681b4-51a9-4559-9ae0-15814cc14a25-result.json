@@ -1,0 +1,55 @@
+{
+  "uuid": "3c3681b4-51a9-4559-9ae0-15814cc14a25",
+  "historyId": "f4afd9fa4ec44e82a753aec7d4a0fa9a",
+  "testCaseId": "[engine:junit-jupiter]/[class:com.automationexercise.automationexercise.MainPageTest]/[method:search()]",
+  "testCaseName": "search()",
+  "fullName": "com.automationexercise.automationexercise.MainPageTest.search",
+  "labels": [
+    {
+      "name": "junit.platform.uniqueid",
+      "value": "[engine:junit-jupiter]/[class:com.automationexercise.automationexercise.MainPageTest]/[method:search()]"
+    },
+    {
+      "name": "host",
+      "value": "lenovo"
+    },
+    {
+      "name": "thread",
+      "value": "12404@lenovo.main(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "com.automationexercise.automationexercise.MainPageTest"
+    },
+    {
+      "name": "testClass",
+      "value": "com.automationexercise.automationexercise.MainPageTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "search"
+    },
+    {
+      "name": "suite",
+      "value": "com.automationexercise.automationexercise.MainPageTest"
+    }
+  ],
+  "links": [],
+  "name": "search()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1673429579794,
+  "stop": 1673429600094
+}
