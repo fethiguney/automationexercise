@@ -13,6 +13,11 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement linkSignupLogin;
 
+    @FindBy(xpath = "//input[@data-qa='login-email']")
+    public WebElement inputLoginEmail;
+
+
+
 
     public AutomationExercisePage (){
         PageFactory.initElements(Driver.getDriver(), this);
