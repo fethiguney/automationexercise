@@ -9,12 +9,30 @@ import org.openqa.selenium.support.PageFactory;
 // page_url = https://www.automationexercise.com/
 public class AutomationExercisePage {
 
-
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement linkSignupLogin;
 
     @FindBy(xpath = "//input[@data-qa='login-email']")
     public WebElement inputLoginEmail;
+
+    @FindBy(xpath = "//input[@type='password']")
+    public WebElement inputLoginPassword;
+
+    @FindBy(xpath = "//*[text() = 'Login']")
+    public WebElement buttonLogin;
+
+    @FindBy(xpath = "//*[text() = 'Login to your account']")
+    public WebElement loginYourAccount;
+
+    @FindBy(xpath = "//*[text()=' Logged in as ']")
+    public WebElement linkLoggedTest;
+
+
+
+  
+
+  
+    
 
 
 

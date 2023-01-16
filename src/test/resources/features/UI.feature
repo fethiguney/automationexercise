@@ -1,6 +1,6 @@
 
   Feature: Automation Exercise UI Test
-   @testcase02
+   @testcase01
     Scenario: Test Case 02 user should be login valid username and password
      Given user goes to automationexercise url
      When user verifies homepage is visible

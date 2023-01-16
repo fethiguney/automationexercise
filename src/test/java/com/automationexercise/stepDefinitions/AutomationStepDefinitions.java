@@ -24,16 +24,18 @@ public class AutomationStepDefinitions {
         automationExercisePage.linkSignupLogin.click();
     }
     @Then("user verifies {string} is visible")
-    public void user_verifies_is_visible(String string) {
-
+    public void user_verifies_is_visible(String loginText) {
+        assertEquals(automationExercisePage.loginYourAccount.getText(), loginText);
     }
     @Then("user enters valid username and password and click login button")
     public void user_enters_valid_username_and_password_and_click_login_button() {
-
+        automationExercisePage.inputLoginEmail.sendKeys(ConfigReader.getProperty("validUserName"));
+        automationExercisePage.inputLoginPassword.sendKeys(ConfigReader.getProperty("validPassword"));
+        automationExercisePage.buttonLogin.click();
     }
     @Then("user verifies that {string} is visible")
-    public void user_verifies_that_is_visible(String string) {
-
+    public void user_verifies_that_is_visible(String loginText) {
+       assertEquals( automationExercisePage.linkLoggedTest.getText(), loginText);
     }
 
 
