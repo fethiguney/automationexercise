@@ -37,6 +37,16 @@ public class AutomationStepDefinitions {
     public void user_verifies_that_is_visible(String loginText) {
        assertEquals( automationExercisePage.linkLoggedTest.getText(), loginText);
     }
+    @Then("user enters invalid username and password and click login button")
+    public void user_enters_invalid_username_and_password_and_click_login_button() {
+      automationExercisePage.inputLoginEmail.sendKeys(ConfigReader.getProperty("invalidUserName"));
+      automationExercisePage.inputLoginPassword.sendKeys(ConfigReader.getProperty("invalidPassword"));
+      automationExercisePage.buttonLogin.click();
+    }
+    @Then("user sees {string} error message")
+    public void user_sees_error_message(String errormessage) {
+        assertEquals(automationExercisePage.yourEmailPasswordIncorrect.getText(), errormessage);
+    }
 
 
 }

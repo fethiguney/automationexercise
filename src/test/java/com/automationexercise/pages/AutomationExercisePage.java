@@ -27,6 +27,9 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//*[text()=' Logged in as ']")
     public WebElement linkLoggedTest;
 
+    @FindBy(xpath = "//*[text() = 'Your email or password is incorrect!']")
+    public WebElement yourEmailPasswordIncorrect;
+
 
 
   
