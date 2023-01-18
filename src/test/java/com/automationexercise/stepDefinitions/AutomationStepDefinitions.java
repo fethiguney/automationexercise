@@ -49,4 +49,9 @@ public class AutomationStepDefinitions {
     }
 
 
+    @Then("user click logout button and user navigated to login page")
+    public void userClickLogoutButtonAndUserNavigatedToLoginPage() {
+        automationExercisePage.linkLogout.click();
+        assertEquals(ConfigReader.getProperty("automationExerciseLoginPage"), Driver.getDriver().getCurrentUrl());
+    }
 }

@@ -30,6 +30,9 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//*[text() = 'Your email or password is incorrect!']")
     public WebElement yourEmailPasswordIncorrect;
 
+    @FindBy(xpath = "//a[@href='/logout']")
+    public WebElement linkLogout;
+
 
 
   
