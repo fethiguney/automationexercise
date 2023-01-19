@@ -33,6 +33,28 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//a[@href='/logout']")
     public WebElement linkLogout;
 
+    @FindBy(xpath = "//*[text() = 'New User Signup!']")
+    public WebElement newUserSignup;
+
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement inputSignupName;
+
+    @FindBy(xpath = "//input[contains(@data-qa, 'signup-email')]")
+    public WebElement inputSignupEmail;
+
+    @FindBy(xpath = "//button[contains(@data-qa, 'signup-button')]")
+    public WebElement buttonSignup;
+
+    @FindBy(xpath = "//*[text() = 'Email Address already exist!']")
+    public WebElement emailAddressAlreadyExist;
+
+
+    
+    
+    
+
+  
+
 
 
   

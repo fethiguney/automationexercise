@@ -29,7 +29,7 @@ public class AutomationStepDefinitions {
     }
     @Then("user enters valid username and password and click login button")
     public void user_enters_valid_username_and_password_and_click_login_button() {
-        automationExercisePage.inputLoginEmail.sendKeys(ConfigReader.getProperty("validUserName"));
+        automationExercisePage.inputLoginEmail.sendKeys(ConfigReader.getProperty("validEmail"));
         automationExercisePage.inputLoginPassword.sendKeys(ConfigReader.getProperty("validPassword"));
         automationExercisePage.buttonLogin.click();
     }
@@ -53,5 +53,19 @@ public class AutomationStepDefinitions {
     public void userClickLogoutButtonAndUserNavigatedToLoginPage() {
         automationExercisePage.linkLogout.click();
         assertEquals(ConfigReader.getProperty("automationExerciseLoginPage"), Driver.getDriver().getCurrentUrl());
+    }
+    @Then("user verifies that New User Signup! text is visible")
+    public void user_verifies_that_new_user_signup_text_is_visible() {
+        assertTrue(automationExercisePage.newUserSignup.isDisplayed());
+    }
+    @Then("user enters existence email and click signup button")
+    public void user_enters_existence_email_and_click_signup_button() {
+        automationExercisePage.inputSignupName.sendKeys(ConfigReader.getProperty("userName"));
+        automationExercisePage.inputSignupEmail.sendKeys(ConfigReader.getProperty("validEmail"));
+        automationExercisePage.buttonSignup.click();
+    }
+    @Then("user sees Email Address already exist! error message")
+    public void user_sees_email_address_already_exist_error_message() {
+        assertTrue(automationExercisePage.emailAddressAlreadyExist.isDisplayed());
     }
 }
