@@ -68,4 +68,28 @@ public class AutomationStepDefinitions {
     public void user_sees_email_address_already_exist_error_message() {
         assertTrue(automationExercisePage.emailAddressAlreadyExist.isDisplayed());
     }
+
+    @When("user clicks contact us button and verifies GET IN TOUCH header is visible")
+    public void user_clicks_contact_us_button_and_verifies_get_ın_touch_header_is_visible() {
+        automationExercisePage.linkContact.click();
+        assertTrue(automationExercisePage.h2GetTouch.isDisplayed());
+    }
+    @Then("user fills name, email, subject and message bars and clicks submit button")
+    public void user_fills_name_email_subject_and_message_bars_and_clicks_submit_button() {
+        automationExercisePage.inputName.sendKeys("test");
+        automationExercisePage.inputEmail.sendKeys("test1234@gmail.com");
+        automationExercisePage.inputSubject.sendKeys("subject");
+        automationExercisePage.textareaMessage.sendKeys("message");
+        automationExercisePage.inputSubmitButton.click();
+    }
+    @Then("user click ok button on js alert and sees Success! Your details have been submitted successfully message")
+    public void user_click_ok_button_on_js_alert_and_sees_success_your_details_have_been_submitted_successfully_message() {
+        Driver.getDriver().switchTo().alert().accept();
+        assertTrue(automationExercisePage.divSuccessYourDetailsHave.isDisplayed());
+    }
+    @Then("user click home link button and verifies that landes to home page successfully")
+    public void user_click_home_link_button_and_verifies_that_landes_to_home_page_successfully() {
+        automationExercisePage.linkHome.click();
+
+    }
 }

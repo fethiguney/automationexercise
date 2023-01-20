@@ -48,6 +48,34 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//*[text() = 'Email Address already exist!']")
     public WebElement emailAddressAlreadyExist;
 
+    @FindBy(xpath = "//*[text() = ' Contact us']")
+    public WebElement linkContact;
+
+    @FindBy(xpath = "//*[text() = 'Get In Touch']")
+    public WebElement h2GetTouch;
+
+    @FindBy(xpath = "//input[@data-qa='name']")
+    public WebElement inputName;
+
+    @FindBy(xpath = "//input[@data-qa='email']")
+    public WebElement inputEmail;
+
+    @FindBy(xpath = "//input[@name='subject']")
+    public WebElement inputSubject;
+
+    @FindBy(xpath = "//*[@id='message']")
+    public WebElement textareaMessage;
+
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement inputSubmitButton;
+
+    @FindBy(xpath = "//*[text() = 'Success! Your details have been submitted successfully.']")
+    public WebElement divSuccessYourDetailsHave;
+
+    @FindBy(xpath = "//*[text() = ' Home']")
+    public WebElement linkHome;
+    
+
 
     
     

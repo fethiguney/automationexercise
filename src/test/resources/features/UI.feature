@@ -34,3 +34,14 @@
     And user verifies that New User Signup! text is visible
     Then user enters existence email and click signup button
     And user sees Email Address already exist! error message
+
+    @testcase05
+    Scenario: user should be able to fill and submit the contact us form
+     and than should go home page
+     Given user goes to automationexercise url
+     When user clicks contact us button and verifies GET IN TOUCH header is visible
+     Then user fills name, email, subject and message bars and clicks submit button
+     And user click ok button on js alert and sees Success! Your details have been submitted successfully message
+     Then user click home link button and verifies that landes to home page successfully
+
+
