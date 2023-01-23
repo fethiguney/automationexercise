@@ -4,6 +4,11 @@ import com.automationexercise.pages.AutomationExercisePage;
 import com.automationexercise.utilities.ConfigReader;
 import com.automationexercise.utilities.Driver;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.ElementClickInterceptedException;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -82,6 +87,14 @@ public class AutomationStepDefinitions {
         automationExercisePage.textareaMessage.sendKeys("message");
         automationExercisePage.inputSubmitButton.click();
     }
+    @Then("user fills {string} {string} {string} and {string} bars and clicks submit button")
+    public void user_fills_and_bars_and_clicks_submit_button(String name, String email, String subject, String message) {
+        automationExercisePage.inputName.sendKeys(name);
+        automationExercisePage.inputEmail.sendKeys(email);
+        automationExercisePage.inputSubject.sendKeys(subject);
+        automationExercisePage.textareaMessage.sendKeys(message);
+        automationExercisePage.inputSubmitButton.click();
+    }
     @Then("user click ok button on js alert and sees Success! Your details have been submitted successfully message")
     public void user_click_ok_button_on_js_alert_and_sees_success_your_details_have_been_submitted_successfully_message() {
         Driver.getDriver().switchTo().alert().accept();
@@ -90,6 +103,32 @@ public class AutomationStepDefinitions {
     @Then("user click home link button and verifies that landes to home page successfully")
     public void user_click_home_link_button_and_verifies_that_landes_to_home_page_successfully() {
         automationExercisePage.linkHome.click();
-
     }
+    @When("user clicks test cases button")
+    public void user_clicks_test_cases_button() {
+        automationExercisePage.linkTestCases.click();
+    }
+    @Then("user is navigated test cases page successfully")
+    public void user_is_navigated_test_cases_page_successfully() {
+     assertEquals(ConfigReader.getProperty("automationExerciseTestCasePage"), Driver.getDriver().getCurrentUrl());
+    }
+    @When("user clicks products page and is navigated all product page")
+    public void user_clicks_products_page_and_is_navigated_all_product_page() {
+        automationExercisePage.linkProducts.click();
+        Driver.getDriver().navigate().refresh();
+        automationExercisePage.linkProducts.click();
+        assertEquals(ConfigReader.getProperty("automationExerciseProductsPage"), Driver.getDriver().getCurrentUrl());
+    }
+    @Then("user clicks on view product of first product and is landed to product detail page")
+    public void user_clicks_on_view_product_of_first_product_and_is_landed_to_product_detail_page() {
+        automationExercisePage.linkViewProduct.click();
+    }
+    @Then("use verifies product name, category, price, availability, condition and brand details are visible")
+    public void use_verifies_product_name_category_price_availability_condition_and_brand_details_are_visible() {
+        assertTrue(automationExercisePage.productName.isDisplayed());
+        assertTrue(automationExercisePage.category.isDisplayed());
+        assertTrue(automationExercisePage.availabilityStock.isDisplayed());
+        assertTrue(automationExercisePage.condition.isDisplayed());
+    }
+
 }

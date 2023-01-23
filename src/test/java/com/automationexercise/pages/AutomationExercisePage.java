@@ -1,10 +1,11 @@
 package com.automationexercise.pages;
 
 import com.automationexercise.utilities.Driver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 // page_url = https://www.automationexercise.com/
 public class AutomationExercisePage {
@@ -74,6 +75,43 @@ public class AutomationExercisePage {
 
     @FindBy(xpath = "//*[text() = ' Home']")
     public WebElement linkHome;
+
+    @FindBy(xpath = "//*[text() = ' Test Cases']")
+    public WebElement linkTestCases;
+
+    @FindBy(xpath = "//a[contains(@href, '/products')]")
+    public WebElement linkProducts;
+
+    @FindBy(xpath = "//a[@href='/product_details/1']")
+    public WebElement linkViewProduct;
+
+    @FindBy(css = "div[class='product-information'] h2")
+    public WebElement productName;
+    
+    @FindBy (xpath = "(//div[@class='product-information']//p)[1]")
+    public WebElement category;
+
+    @FindBy(xpath = "//*[text()='Availability:']")
+    public WebElement availabilityStock;
+
+    @FindBy(xpath = "//*[text() = 'Condition:']")
+    public WebElement condition;
+
+    @FindBy(xpath = "//*[text() = 'Brand:']")
+    public WebElement bBrand;
+
+    @FindBy (xpath = "//div[@id='dismiss-button']")
+    public WebElement adSkip;
+
+
+
+ 
+
+    
+
+  
+
+
     
 
 
