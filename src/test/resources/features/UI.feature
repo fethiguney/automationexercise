@@ -60,3 +60,10 @@ Feature: Automation Exercise UI Test
      When user clicks products page and is navigated all product page
      Then user clicks on view product of first product and is landed to product detail page
      And use verifies product name, category, price, availability, condition and brand details are visible
+
+  @testcase08
+  Scenario: user should be able to search product and see the results which related to search
+    Given user goes to automationexercise url
+    When user clicks products page and is navigated all product page
+    Then user enters "T-Shirt" product name in search bar and clicks search button
+    And user sees SEARCHED PRODUCTS text is visible and verifies all the products related to "T-Shirt" search

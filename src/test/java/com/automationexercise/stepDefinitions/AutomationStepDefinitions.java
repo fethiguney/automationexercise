@@ -130,5 +130,15 @@ public class AutomationStepDefinitions {
         assertTrue(automationExercisePage.availabilityStock.isDisplayed());
         assertTrue(automationExercisePage.condition.isDisplayed());
     }
+    @Then("user enters {string} product name in search bar and clicks search button")
+    public void user_enters_product_name_in_search_bar_and_clicks_search_button(String product) {
+        automationExercisePage.inputSearchProduct.sendKeys(product);
+        automationExercisePage.buttonSubmitSearch.click();
+    }
 
+    @Then("user sees SEARCHED PRODUCTS text is visible and verifies all the products related to {string} search")
+    public void user_sees_searched_products_text_is_visible_and_verifies_all_the_products_related_to_search(String searchProduct) {
+        assertTrue(automationExercisePage.h2SearchedProducts.isDisplayed());
+        ;
+    }
 }

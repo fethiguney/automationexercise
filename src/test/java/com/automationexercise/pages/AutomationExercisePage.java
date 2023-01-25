@@ -100,8 +100,19 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//*[text() = 'Brand:']")
     public WebElement bBrand;
 
-    @FindBy (xpath = "//div[@id='dismiss-button']")
-    public WebElement adSkip;
+    @FindBy(xpath = "//input[@name='search']")
+    public WebElement inputSearchProduct;
+
+    @FindBy(xpath = "//button[@id='submit_search']")
+    public WebElement buttonSubmitSearch;
+
+    @FindBy(xpath = "//*[text() = 'Searched Products']")
+    public WebElement h2SearchedProducts;
+
+    @FindBy(xpath = "//div[@class='product-overlay']//p")
+    public List<WebElement> searchedProducts;
+
+   
 
 
 
