@@ -112,6 +112,15 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//div[@class='product-overlay']//p")
     public List<WebElement> searchedProducts;
 
+    @FindBy (xpath = "//*[text()='Subscription']")
+    public WebElement subscriptionHeader;
+
+    @FindBy (xpath = "//input[@id='susbscribe_email']")
+    public WebElement subscribeEmail;
+
+    @FindBy (xpath = "//button[@id='subscribe']")
+    public WebElement subscribeButton;
+
    
 
 
