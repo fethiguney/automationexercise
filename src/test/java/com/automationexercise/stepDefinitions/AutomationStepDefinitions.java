@@ -4,12 +4,8 @@ import com.automationexercise.pages.AutomationExercisePage;
 import com.automationexercise.utilities.ConfigReader;
 import com.automationexercise.utilities.Driver;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.ElementClickInterceptedException;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
+import static com.automationexercise.utilities.ReusableMethods.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AutomationStepDefinitions {
@@ -139,6 +135,19 @@ public class AutomationStepDefinitions {
     @Then("user sees SEARCHED PRODUCTS text is visible and verifies all the products related to {string} search")
     public void user_sees_searched_products_text_is_visible_and_verifies_all_the_products_related_to_search(String searchProduct) {
         assertTrue(automationExercisePage.h2SearchedProducts.isDisplayed());
-        ;
+    }
+    @When("user verifies subscription box in the footer")
+    public void user_verifies_subscription_box_in_the_footer() {
+      scrollIntoView(automationExercisePage.subscriptionHeader);
+      assertTrue(automationExercisePage.subscriptionHeader.isDisplayed());
+    }
+    @Then("user enters a subscribed email address and click button")
+    public void user_enters_a_subscribed_email_address_and_click_button() {
+        automationExercisePage.subscribeEmail.sendKeys(ConfigReader.getProperty("validEmail"));
+        automationExercisePage.subscribeButton.click();
+    }
+    @Then("user sees {string} message")
+    public void user_sees_message(String message) {
+        assertEquals(message, automationExercisePage.subscribedMailMessageText.getText());
     }
 }

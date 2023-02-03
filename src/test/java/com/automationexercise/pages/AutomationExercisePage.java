@@ -121,6 +121,9 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//button[@id='subscribe']")
     public WebElement subscribeButton;
 
+    @FindBy (xpath = "//div[text()='You have been successfully subscribed!']")
+    public WebElement subscribedMailMessageText;
+
    
 
 
