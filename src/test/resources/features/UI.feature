@@ -69,8 +69,16 @@ Feature: Automation Exercise UI Test
     And user sees SEARCHED PRODUCTS text is visible and verifies all the products related to "T-Shirt" search
 
   @testcase09
-  Scenario: user should be able to finde subscription box in the home page
+  Scenario: user should be able to find subscription box in the home page
     Given user goes to automationexercise url
+    When user verifies subscription box in the footer
+    Then user enters a subscribed email address and click button
+    And user sees "You have been successfully subscribed!" message
+
+  @testcase10
+  Scenario: user should be able to find subscription box in the cart page
+    Given user goes to automationexercise url
+    And user clicks cart button
     When user verifies subscription box in the footer
     Then user enters a subscribed email address and click button
     And user sees "You have been successfully subscribed!" message

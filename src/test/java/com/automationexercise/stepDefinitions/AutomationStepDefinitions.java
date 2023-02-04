@@ -150,4 +150,9 @@ public class AutomationStepDefinitions {
     public void user_sees_message(String message) {
         assertEquals(message, automationExercisePage.subscribedMailMessageText.getText());
     }
+
+    @And("user clicks cart button")
+    public void userClicksCartButton() {
+        automationExercisePage.linkcart.click();
+    }
 }

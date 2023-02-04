@@ -124,6 +124,9 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//div[text()='You have been successfully subscribed!']")
     public WebElement subscribedMailMessageText;
 
+    @FindBy(xpath = "//a[@href='/view_cart']")
+    public WebElement linkcart;
+
    
 
 
