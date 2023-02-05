@@ -8,7 +8,7 @@ import io.cucumber.java.en.*;
 import static com.automationexercise.utilities.ReusableMethods.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AutomationStepDefinitions {
+public class HomePageStepDefinitions {
 
     AutomationExercisePage automationExercisePage=new AutomationExercisePage();
 

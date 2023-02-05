@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
         glue = "com/automationexercise/stepDefinitions",
-        tags = "@testcase10",
-        dryRun = false
+        tags = "@productPagetestcase01",
+        dryRun = true
 
 )
 

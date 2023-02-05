@@ -1,4 +1,4 @@
-Feature: Automation Exercise UI Test
+Feature: Automation Exercise Home Page UI Test
 
   @testcase01
   Scenario: user should be login valid username and password
