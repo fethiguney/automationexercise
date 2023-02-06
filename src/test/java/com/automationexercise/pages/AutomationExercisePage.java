@@ -130,8 +130,11 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//div[@class='product-overlay']")
     public List<WebElement> productOverLaysList;
 
-    @FindBy (xpath = "//div[@class='overlay-content']//a[text()='Add to cart']")
+    @FindBy (xpath = "//div[@class='overlay-content']//a")
     public List<WebElement> addToCartButtonList;
+
+    @FindBy (xpath = "//div[@class='overlay-content']//p")
+    public List<WebElement> productsNameList;
 
     @FindBy (xpath = "//button[text()='Continue Shopping']")
     public WebElement continueShoppingButton;
@@ -139,7 +142,7 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//u[text()='View Cart']")
     public WebElement viewCartButton;
 
-    @FindBy (xpath = "//tbody//td[2]")
+    @FindBy (xpath = "//tbody//td[2]//a")
     public List<WebElement> productNamesAddedCart;
 
    
