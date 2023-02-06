@@ -19,6 +19,10 @@ public class ReusableMethods {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
+    public static void actionsClick(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.click(element).perform();
+    }
 
     //==========Return a list of string given a list of Web Element====////
     public static List<String> getElementsText(List<WebElement> list) {

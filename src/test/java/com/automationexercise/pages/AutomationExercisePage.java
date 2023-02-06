@@ -127,7 +127,23 @@ public class AutomationExercisePage {
     @FindBy(xpath = "//a[@href='/view_cart']")
     public WebElement linkcart;
 
+    @FindBy (xpath = "//div[@class='product-overlay']")
+    public List<WebElement> productOverLaysList;
+
+    @FindBy (xpath = "//a[contains(@class, 'add-to-cart')]")
+    public List<WebElement> addToCartButtonList;
+
+    @FindBy (xpath = "//button[text()='Continue Shopping']")
+    public WebElement continueShoppingButton;
+
+    @FindBy(xpath = "//u[text()='View Cart']")
+    public WebElement viewCartButton;
+
+    @FindBy (xpath = "//tbody//td[2]")
+    public List<WebElement> productNamesAddedCart;
+
    
+
 
 
 
