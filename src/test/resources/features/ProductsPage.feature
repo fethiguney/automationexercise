@@ -8,4 +8,4 @@
       Then user hovers over product 1 and click add to cart button
       And user clicks continue shopping button
       Then user hovers over product 2 and click add to cart button
-      And user clicks view cart button and verifies both product are added to cart
+      And user clicks view cart button and verifies both two product are added to cart

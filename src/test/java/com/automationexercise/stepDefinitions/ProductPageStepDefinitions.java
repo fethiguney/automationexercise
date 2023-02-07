@@ -23,18 +23,21 @@ public class ProductPageStepDefinitions {
         clickedProductNames.add(automationExercisePage.productsNameList.get(num).getText());
         waitFor(1);
         jsClick(automationExercisePage.addToCartButtonList.get(num));
+
     }
     @Then("user clicks continue shopping button")
     public void user_clicks_continue_shopping_button() {
         automationExercisePage.continueShoppingButton.click();
     }
 
-    @Then("user clicks view cart button and verifies both product are added to cart")
-    public void user_clicks_view_cart_button_and_verifies_both_product_are_added_to_cart() {
+    @Then("user clicks view cart button and verifies both two product are added to cart")
+    public void user_clicks_view_cart_button_and_verifies_both_two_product_are_added_to_cart() {
         automationExercisePage.viewCartButton.click();
         addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(0).getText());
         addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(1).getText());
         assertTrue(addedCartProductNames.containsAll(clickedProductNames));
+
     }
+
 
 }
