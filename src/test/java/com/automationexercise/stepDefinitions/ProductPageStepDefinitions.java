@@ -38,6 +38,22 @@ public class ProductPageStepDefinitions {
         assertTrue(addedCartProductNames.containsAll(clickedProductNames));
 
     }
+    @When("user clicks view product for the {int}. product on home page")
+    public void user_clicks_view_product_for_the_product_on_home_page(Integer prdctOrder) {
+
+    }
+    @Then("user verifies product detail is opened and increase quantity to {int}")
+    public void user_verifies_product_detail_is_opened_and_increase_quantity_to(Integer quantity) {
+
+    }
+    @Then("user clicks add to cart button and clicks view cart")
+    public void user_clicks_add_to_cart_button_and_clicks_view_cart() {
+
+    }
+    @Then("user verifies that product is displayed in cart page with {int} quantity")
+    public void user_verifies_that_product_is_displayed_in_cart_page_with_quantity(Integer quantity) {
+
+    }
 
 
 }
