@@ -13,7 +13,7 @@
     @productPagetestcase02
     Scenario:user should be able to select product from home page and then add to cart
       Given user goes to automationexercise url
-      When user clicks view product for the 1. product on home page
-      Then user verifies product detail is opened and increase quantity to 4
+      When user clicks view product for the 3. product on home page
+      Then user verifies product detail is opened and increase quantity to 2
       And user clicks add to cart button and clicks view cart
-      Then user verifies that product is displayed in cart page with 4 quantity
+      Then user verifies that product is displayed in cart page with 2 quantity

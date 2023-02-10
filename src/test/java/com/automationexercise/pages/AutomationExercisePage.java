@@ -151,6 +151,9 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//input[@id='product_id']")
     public WebElement quantityIncreaseButton;
 
+    @FindBy (xpath = "//input[@id='quantity']")
+    public WebElement quantityOfProduct;
+
     @FindBy (xpath = "//button[@type='button']")
     public WebElement addToCartButton;
 
