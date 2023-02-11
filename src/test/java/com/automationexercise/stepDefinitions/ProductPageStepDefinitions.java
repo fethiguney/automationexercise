@@ -67,6 +67,10 @@ public class ProductPageStepDefinitions {
         Integer actualQuantity=Integer.parseInt(automationExercisePage.cartQuantityList.get(0).getText());
         assertEquals(expectedQuantity, actualQuantity);
     }
+    @Then("user clicks proceed to checkout button")
+    public void user_clicks_proceed_to_checkout_button() {
+      automationExercisePage.proceedToCheckoutButton.click();
+    }
 
 
 }

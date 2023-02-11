@@ -24,3 +24,4 @@
       Given user goes to automationexercise url
       Then user hovers over product 1 and click add to cart button
       And user clicks view cart button
+      Then user clicks proceed to checkout button

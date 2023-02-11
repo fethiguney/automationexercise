@@ -160,6 +160,9 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//tbody//td[4]//button")
     public List<WebElement> cartQuantityList;
 
+    @FindBy (xpath = "//*[text()='Proceed To Checkout']")
+    public WebElement proceedToCheckoutButton;
+
 
 
    
