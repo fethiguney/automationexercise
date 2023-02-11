@@ -26,19 +26,21 @@ public class ProductPageStepDefinitions {
         jsClick(automationExercisePage.addToCartButtonList.get(num));
 
     }
+    @Then("user clicks view cart button")
+    public void user_clicks_view_cart_button() {
+        automationExercisePage.viewCartButton.click();
+    }
+    @Then("user verifies both two product are added to cart")
+    public void user_verifies_both_two_product_are_added_to_cart() {
+        addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(0).getText());
+        addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(1).getText());
+        assertTrue(addedCartProductNames.containsAll(clickedProductNames));
+    }
     @Then("user clicks continue shopping button")
     public void user_clicks_continue_shopping_button() {
         automationExercisePage.continueShoppingButton.click();
     }
 
-    @Then("user clicks view cart button and verifies both two product are added to cart")
-    public void user_clicks_view_cart_button_and_verifies_both_two_product_are_added_to_cart() {
-        automationExercisePage.viewCartButton.click();
-        addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(0).getText());
-        addedCartProductNames.add(automationExercisePage.productNamesAddedCart.get(1).getText());
-        assertTrue(addedCartProductNames.containsAll(clickedProductNames));
-
-    }
     @When("user clicks view product for the {int}. product on home page")
     public void user_clicks_view_product_for_the_product_on_home_page(Integer orderOfPrdct) {
         int prdctOrder=orderOfPrdct-1;
