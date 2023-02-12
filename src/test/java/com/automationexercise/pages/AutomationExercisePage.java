@@ -163,6 +163,9 @@ public class AutomationExercisePage {
     @FindBy (xpath = "//*[text()='Proceed To Checkout']")
     public WebElement proceedToCheckoutButton;
 
+    @FindBy (xpath = "//u[text()='Register / Login']")
+    public WebElement registerLoginButton;
+
 
 
    

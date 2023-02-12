@@ -71,6 +71,9 @@ public class ProductPageStepDefinitions {
     public void user_clicks_proceed_to_checkout_button() {
       automationExercisePage.proceedToCheckoutButton.click();
     }
-
+    @Then("user clicks Register\\/Login button and fills details in signup and create account")
+    public void user_clicks_register_login_button_and_fills_details_in_signup_and_create_account() {
+      automationExercisePage.registerLoginButton.click();
+    }
 
 }
