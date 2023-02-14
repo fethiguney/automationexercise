@@ -171,34 +171,6 @@ public class AutomationExercisePage {
    
 
 
-
-
- 
-
-    
-
-  
-
-
-    
-
-
-    
-    
-    
-
-  
-
-
-
-  
-
-  
-    
-
-
-
-
     public AutomationExercisePage (){
         PageFactory.initElements(Driver.getDriver(), this);
     }
