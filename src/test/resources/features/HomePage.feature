@@ -1,6 +1,15 @@
 Feature: Automation Exercise Home Page UI Test
 
-  @testcase01
+  @homepagetestcase01
+  Scenario: user should be sign up successfully
+    Given user goes to automationexercise url
+    When user verifies homepage is visible
+    Then user click signupLogin button
+    And user fills name and email address and click signup button
+    Then user fills new user informations and click create account button
+    And user verifies account created and log in as text are visible
+
+  @homepagetestcase02
   Scenario: user should be login valid username and password
     Given user goes to automationexercise url
     When user verifies homepage is visible
@@ -9,7 +18,7 @@ Feature: Automation Exercise Home Page UI Test
     Then user enters valid username and password and click login button
     And user verifies that "Logged in as test" is visible
 
-  @testcase02
+  @homepagetestcase03
   Scenario: user should not be login invalid username and password
     Given user goes to automationexercise url
     Then click on signup and login button
@@ -17,7 +26,7 @@ Feature: Automation Exercise Home Page UI Test
     Then user enters invalid username and password and click login button
     And user sees "Your email or password is incorrect!" error message
 
-  @testcase03
+  @homepagetestcase04
   Scenario: user should be logout after login invalid username and password
     Given user goes to automationexercise url
     Then click on signup and login button
@@ -26,7 +35,7 @@ Feature: Automation Exercise Home Page UI Test
     And user verifies that "Logged in as test" is visible
     Then user click logout button and user navigated to login page
 
-  @testcase04
+  @homepagetestcase05
   Scenario: user should not be register with existence email
     Given user goes to automationexercise url
     When user verifies homepage is visible
@@ -35,7 +44,7 @@ Feature: Automation Exercise Home Page UI Test
     Then user enters existence email and click signup button
     And user sees Email Address already exist! error message
 
-  @testcase05
+  @homepagetestcase06
   Scenario Outline: user should be able to fill and submit the contact us form
   and than should go home page
     Given user goes to automationexercise url
@@ -48,34 +57,34 @@ Feature: Automation Exercise Home Page UI Test
       | test | test123@gmail.com | test data | contact form testing |
 
 
-  @testcase06
+  @homepagetestcase07
   Scenario: user should be able to reach test cases page successfully
     Given user goes to automationexercise url
     When user clicks test cases button
     Then user is navigated test cases page successfully
 
-  @testcase07
+  @homepagetestcase08
   Scenario: user should be able to select a product and see the details
      Given user goes to automationexercise url
      When user clicks products page and is navigated all product page
      Then user clicks on view product of first product and is landed to product detail page
      And use verifies product name, category, price, availability, condition and brand details are visible
 
-  @testcase08
+  @homepagetestcase09
   Scenario: user should be able to search product and see the results which related to search
     Given user goes to automationexercise url
     When user clicks products page and is navigated all product page
     Then user enters "T-Shirt" product name in search bar and clicks search button
     And user sees SEARCHED PRODUCTS text is visible and verifies all the products related to "T-Shirt" search
 
-  @testcase09
+  @homepagetestcase10
   Scenario: user should be able to find subscription box in the home page
     Given user goes to automationexercise url
     When user verifies subscription box in the footer
     Then user enters a subscribed email address and click button
     And user sees "You have been successfully subscribed!" message
 
-  @testcase10
+  @homepagetestcase11
   Scenario: user should be able to find subscription box in the cart page
     Given user goes to automationexercise url
     And user clicks cart button

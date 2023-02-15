@@ -75,13 +75,13 @@ public class ProductPageStepDefinitions {
     public void user_clicks_proceed_to_checkout_button() {
       homePage.proceedToCheckoutButton.click();
     }
-    @Then("user clicks Register\\/Login button and fills details in signup and create account")
+    @Then("user clicks RegisterLogin button and fills details in signup and create account")
     public void user_clicks_register_login_button_and_fills_details_in_signup_and_create_account() {
-      homePage.registerLoginButton.click();
-      loginPage.signupName.sendKeys(Faker.instance().name().fullName());
-      loginPage.singupEmail.sendKeys(Faker.instance().internet().emailAddress());
-      loginPage.signupButton.click();
-      ReusableMethods.signUp();
+        homePage.registerLoginButton.click();
+        loginPage.signupName.sendKeys(Faker.instance().name().fullName());
+        loginPage.singupEmail.sendKeys(Faker.instance().internet().emailAddress());
+        loginPage.signupButton.click();
+        ReusableMethods.signUp();
     }
 
 }

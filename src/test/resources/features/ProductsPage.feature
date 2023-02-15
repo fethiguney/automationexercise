@@ -25,4 +25,4 @@
       Then user hovers over product 1 and click add to cart button
       And user clicks view cart button
       Then user clicks proceed to checkout button
-      And user clicks Register/Login button and fills details in signup and create account
+      And user clicks RegisterLogin button and fills details in signup and create account
