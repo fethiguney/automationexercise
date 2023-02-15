@@ -1,6 +1,6 @@
 package com.automationexercise.stepDefinitions;
 
-import com.automationexercise.pages.AutomationExercisePage;
+import com.automationexercise.pages.HomePage;
 import com.automationexercise.utilities.ConfigReader;
 import com.automationexercise.utilities.Driver;
 import io.cucumber.java.en.*;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HomePageStepDefinitions {
 
-    AutomationExercisePage automationExercisePage=new AutomationExercisePage();
+    HomePage automationExercisePage=new HomePage();
 
     @Given("user goes to automationexercise url")
     public void user_goes_to_automationexercise_url() {

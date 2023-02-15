@@ -36,6 +36,9 @@ public class LoginPage {
     @FindBy (css = "select#country")
     public WebElement signupCountrySelectButton;
 
+    @FindBy (css = "input#state")
+    public WebElement signupState;
+
     @FindBy (css = "input#city")
     public WebElement signupCity;
 
@@ -48,6 +51,11 @@ public class LoginPage {
     @FindBy (css = "button[data-qa='create-account']")
     public WebElement createAccountButton;
 
+    @FindBy (xpath = "//*[text()='Account Created!']")
+    public WebElement accountCreatedText;
+
+    @FindBy (xpath = "//*[text()=' Logged in as ']")
+    public WebElement loggedInAsText;
 
 
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 // page_url = https://www.automationexercise.com/
-public class AutomationExercisePage {
+public class HomePage {
 
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement linkSignupLogin;
@@ -171,7 +171,7 @@ public class AutomationExercisePage {
    
 
 
-    public AutomationExercisePage (){
+    public HomePage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 }

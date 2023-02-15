@@ -1,5 +1,8 @@
 package com.automationexercise.utilities;
 
+import com.automationexercise.pages.LoginPage;
+import com.github.javafaker.Faker;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -12,9 +15,22 @@ import java.util.List;
 
 public class ReusableMethods {
 
+    public static void signUp(){
+        LoginPage loginPage=new LoginPage();
+        loginPage.genderList.get(0).click();
+        loginPage.signupPassword.sendKeys(Faker.instance().internet().password());
+        loginPage.signupFirstName.sendKeys(Faker.instance().name().firstName());
+        loginPage.signupLastName.sendKeys(Faker.instance().name().lastName());
+        loginPage.signupAdress.sendKeys(Faker.instance().address().fullAddress());
+        loginPage.signupCountrySelectButton.sendKeys("United States");
+        loginPage.signupState.sendKeys(Faker.instance().address().state());
+        loginPage.signupCity.sendKeys(Faker.instance().address().city());
+        loginPage.signupZipCode.sendKeys(Faker.instance().address().zipCode());
+        loginPage.signupMobileNumber.sendKeys(Faker.instance().phoneNumber().cellPhone());
+        loginPage.createAccountButton.click();
 
+    }
 
-    //========Hover Over(Elementin üzerinde beklemek)=====//
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
