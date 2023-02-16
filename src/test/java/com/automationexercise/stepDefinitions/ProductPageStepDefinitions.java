@@ -83,5 +83,9 @@ public class ProductPageStepDefinitions {
         loginPage.signupButton.click();
         ReusableMethods.signUp();
     }
+    @Then("user enters description in comment text area and click place order button")
+    public void user_enters_description_in_comment_text_area_and_click_place_order_button() {
+
+    }
 
 }

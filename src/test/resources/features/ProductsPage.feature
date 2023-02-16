@@ -26,3 +26,7 @@
       And user clicks view cart button
       Then user clicks proceed to checkout button
       And user clicks RegisterLogin button and fills details in signup and create account
+      Then user verifies account created and log in as text are visible
+      And user clicks cart button
+      Then user clicks proceed to checkout button
+      And user enters description in comment text area and click place order button
