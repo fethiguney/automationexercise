@@ -14,6 +14,26 @@ public class ProductPage {
     @FindBy (xpath = "//a[@href='/payment']")
     public WebElement placeOrderButton;
 
+    @FindBy (css = "input[name='name_on_card']")
+    public WebElement nameOnCardBar;
+
+    @FindBy (css = "input[name='card_number']")
+    public WebElement cardNumberBar;
+
+    @FindBy (css = "input[name='cvc']")
+    public WebElement cvcCardBar;
+
+    @FindBy (css = "input[name='expiry_month']")
+    public WebElement expiryMonthCardBar;
+
+    @FindBy (css = "input[name='expiry_year']")
+    public WebElement expiryYearCardBar;
+
+    @FindBy (css = "button[data-qa='pay-button']")
+    public WebElement payAndOrderConfirmButton;
+
+
+
 
     public ProductPage() {PageFactory.initElements(Driver.getDriver(), this);    }
 }

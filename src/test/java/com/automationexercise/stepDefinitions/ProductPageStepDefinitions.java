@@ -3,6 +3,7 @@ package com.automationexercise.stepDefinitions;
 
 import com.automationexercise.pages.HomePage;
 import com.automationexercise.pages.LoginPage;
+import com.automationexercise.pages.ProductPage;
 import com.automationexercise.utilities.Driver;
 import com.automationexercise.utilities.ReusableMethods;
 import com.github.javafaker.Faker;
@@ -18,6 +19,7 @@ public class ProductPageStepDefinitions {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage=new LoginPage();
+    ProductPage productPage=new ProductPage();
     List<String> clickedProductNames=new ArrayList<>();
     List<String> addedCartProductNames=new ArrayList<>();
 
@@ -85,7 +87,8 @@ public class ProductPageStepDefinitions {
     }
     @Then("user enters description in comment text area and click place order button")
     public void user_enters_description_in_comment_text_area_and_click_place_order_button() {
-
+        productPage.checkoutTextArea.sendKeys(Faker.instance().lorem().paragraph());
+        productPage.placeOrderButton.click();
     }
 
 }
