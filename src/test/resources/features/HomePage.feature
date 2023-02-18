@@ -8,6 +8,7 @@ Feature: Automation Exercise Home Page UI Test
     And user fills name and email address and click signup button
     Then user fills new user informations and click create account button
     And user verifies account created and log in as text are visible
+    Then user clicks delete account button then click continue button
 
   @homepagetestcase02
   Scenario: user should be login valid username and password
