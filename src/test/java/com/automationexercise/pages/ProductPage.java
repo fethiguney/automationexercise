@@ -32,6 +32,10 @@ public class ProductPage {
     @FindBy (css = "button[data-qa='pay-button']")
     public WebElement payAndOrderConfirmButton;
 
+    @FindBy (css = "div#success_message")
+    public WebElement orderPlacedSuccessfullyText;
+
+
 
 
 

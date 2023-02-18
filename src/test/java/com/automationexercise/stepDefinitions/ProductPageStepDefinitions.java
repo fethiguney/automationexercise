@@ -90,5 +90,19 @@ public class ProductPageStepDefinitions {
         productPage.checkoutTextArea.sendKeys(Faker.instance().lorem().paragraph());
         productPage.placeOrderButton.click();
     }
+    @Then("user enters payment details and clicks pay and confirm order button")
+    public void user_enters_payment_details_and_clicks_pay_and_confirm_order_button() {
+     productPage.nameOnCardBar.sendKeys(Faker.instance().name().fullName());
+     productPage.cardNumberBar.sendKeys(Faker.instance().number().digit());
+     productPage.cvcCardBar.sendKeys(Faker.instance().number().digits(3));
+     productPage.expiryMonthCardBar.sendKeys(Faker.instance().number().digits(2));
+     productPage.expiryYearCardBar.sendKeys(Faker.instance().number().digits(4));
+     productPage.payAndOrderConfirmButton.click();
+    }
+    @Then("user clicks delete account button then click continue button")
+    public void user_clicks_delete_account_button_then_click_continue_button() {
+     loginPage.deleteAccountButton.click();
+     loginPage.continueButton.click();
+    }
 
 }

@@ -57,7 +57,11 @@ public class LoginPage {
     @FindBy (xpath = "//*[text()=' Logged in as ']")
     public WebElement loggedInAsText;
 
+    @FindBy (xpath = "//a[@href='/delete_account']")
+    public WebElement deleteAccountButton;
 
+    @FindBy (xpath = "//a[@data-qa='continue-button']")
+    public WebElement continueButton;
 
 
 
