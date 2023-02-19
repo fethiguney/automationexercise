@@ -1,7 +1,7 @@
 
   Feature: Automation Exercise Products Page UI Test
 
-    @productPagetestcase01
+    @productPagetestcase01 @regression
     Scenario:user should be able to add products to cart successfully
       Given user goes to automationexercise url
       When user clicks products page and is navigated all product page
@@ -11,7 +11,7 @@
       And user clicks view cart button
       Then user verifies both two product are added to cart
 
-    @productPagetestcase02
+    @productPagetestcase02 @regression
     Scenario:user should be able to select product from home page and then add to cart
       Given user goes to automationexercise url
       When user clicks view product for the 3. product on home page
@@ -19,7 +19,7 @@
       And user clicks add to cart button and clicks view cart
       Then user verifies that product is displayed in cart page with 2 quantity
 
-    @productPagetestcase03
+    @productPagetestcase03 @regression
     Scenario:user should be able to place order a product register while checkout
       Given user goes to automationexercise url
       Then user hovers over product 1 and click add to cart button
@@ -33,7 +33,7 @@
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
 
-    @productPagetestcase04
+    @productPagetestcase04 @regression
     Scenario:user should be able to place order a product register before checkout
       Given user goes to automationexercise url
       When click on signup and login button
