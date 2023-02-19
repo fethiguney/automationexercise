@@ -32,3 +32,17 @@
       And user enters description in comment text area and click place order button
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
+
+    @productPagetestcase04
+    Scenario:user should be able to place order a product register before checkout
+      Given user goes to automationexercise url
+      When click on signup and login button
+      Then user fills name and email address and click signup button
+      And user fills new user informations and click create account button
+      Then user verifies account created and log in as text are visible
+      And user hovers over product 3 and click add to cart button
+      When user clicks view cart button
+      Then user clicks proceed to checkout button
+      And user enters description in comment text area and click place order button
+      Then user enters payment details and clicks pay and confirm order button
+      And user clicks delete account button then click continue button
