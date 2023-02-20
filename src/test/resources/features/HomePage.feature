@@ -1,3 +1,4 @@
+
 Feature: Automation Exercise Home Page UI Test
 
   @homepagetestcase01 @regression

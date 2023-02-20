@@ -75,7 +75,7 @@ public class ProductPageStepDefinitions {
     }
     @Then("user clicks proceed to checkout button")
     public void user_clicks_proceed_to_checkout_button() {
-      homePage.proceedToCheckoutButton.click();
+            homePage.proceedToCheckoutButton.click();
     }
     @Then("user clicks RegisterLogin button and fills details in signup and create account")
     public void user_clicks_register_login_button_and_fills_details_in_signup_and_create_account() {
