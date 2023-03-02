@@ -59,3 +59,9 @@
       And user enters description in comment text area and click place order button
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
+
+    @productPagetestcase06 @regression
+    Scenario:user should be able to remove products from cart
+      Given user goes to automationexercise url
+      Then user hovers over product 1 and click add to cart button
+      And user clicks view cart button
