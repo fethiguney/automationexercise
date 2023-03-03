@@ -108,5 +108,9 @@ public class ProductPageStepDefinitions {
     public void user_clicks_x_button_to_remove_product_from_the_cart() {
         productPage.cartDeleteButton.click();
     }
+    @Then("user verifies cart page is empty")
+    public void user_verifies_cart_page_is_empty() {
+        productPage.cartEmptyText.isDisplayed();
+    }
 
 }
