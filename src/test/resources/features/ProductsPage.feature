@@ -65,3 +65,5 @@
       Given user goes to automationexercise url
       Then user hovers over product 1 and click add to cart button
       And user clicks view cart button
+      Then user clicks x button to remove product from the cart
+      And user verifies cart page is empty

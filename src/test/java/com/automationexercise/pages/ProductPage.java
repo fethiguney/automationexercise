@@ -35,6 +35,12 @@ public class ProductPage {
     @FindBy (css = "div#success_message")
     public WebElement orderPlacedSuccessfullyText;
 
+    @FindBy (css = "a.cart_quantity_delete")
+    public WebElement cartDeleteButton;
+
+    @FindBy (xpath = "//*[text()='Cart is empty!']")
+    public WebElement cartEmptyText;
+
 
 
 

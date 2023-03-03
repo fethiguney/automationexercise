@@ -104,5 +104,9 @@ public class ProductPageStepDefinitions {
      loginPage.deleteAccountButton.click();
      loginPage.continueButton.click();
     }
+    @Then("user clicks x button to remove product from the cart")
+    public void user_clicks_x_button_to_remove_product_from_the_cart() {
+        productPage.cartDeleteButton.click();
+    }
 
 }
