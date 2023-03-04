@@ -67,3 +67,9 @@
       And user clicks view cart button
       Then user clicks x button to remove product from the cart
       And user verifies cart page is empty
+
+    @productPagetestcase07 @regression
+    Scenario:user should be able to select a category and view products
+    that are related to the category
+      Given user goes to automationexercise url
+
