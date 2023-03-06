@@ -72,4 +72,8 @@
     Scenario:user should be able to select a category and view products
     that are related to the category
       Given user goes to automationexercise url
+      Then user clicks women category
+      And user clicks first category link under women category
+      Then user verifies category page is displayed and confirm text "Women - Dress Products"
+      And user clicks on first sub-category link of man category on the left side bar
 

@@ -41,6 +41,9 @@ public class ProductPage {
     @FindBy (xpath = "//*[text()='Cart is empty!']")
     public WebElement cartEmptyText;
 
+    @FindBy (xpath = "//*[text()='Women - Dress Products']")
+    public WebElement womenDressProductsHeaderText;
+
 
 
 

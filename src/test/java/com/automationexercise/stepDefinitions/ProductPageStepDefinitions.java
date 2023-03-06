@@ -112,5 +112,21 @@ public class ProductPageStepDefinitions {
     public void user_verifies_cart_page_is_empty() {
         productPage.cartEmptyText.isDisplayed();
     }
+    @Then("user clicks women category")
+    public void user_clicks_women_category() {
+
+    }
+    @Then("user clicks first category link under women category")
+    public void user_clicks_first_category_link_under_women_category() {
+
+    }
+    @Then("user verifies category page is displayed and confirm text {string}")
+    public void user_verifies_category_page_is_displayed_and_confirm_text(String string) {
+
+    }
+    @Then("user clicks on first sub-category link of man category on the left side bar")
+    public void user_clicks_on_first_sub_category_link_of_man_category_on_the_left_side_bar() {
+
+    }
 
 }

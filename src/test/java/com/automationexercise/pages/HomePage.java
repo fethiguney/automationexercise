@@ -166,6 +166,20 @@ public class HomePage {
     @FindBy (xpath = "//u[text()='Register / Login']")
     public WebElement registerLoginButton;
 
+    @FindBy (xpath = "//a[@href='#Women']")
+    public WebElement womenCategoryButton;
+
+    @FindBy (xpath = "//div[@id='Women']//a")
+    public List<WebElement> womenCategoryList;
+
+    @FindBy (xpath = "//a[@href='#Men']")
+    public WebElement menCategoryButton;
+
+    @FindBy (xpath = "//div[@id='Men']//a")
+    public List<WebElement> menCategoryList;
+
+
+
 
 
    
