@@ -114,19 +114,24 @@ public class ProductPageStepDefinitions {
     }
     @Then("user clicks women category")
     public void user_clicks_women_category() {
-
+        homePage.womenCategoryButton.click();
     }
     @Then("user clicks first category link under women category")
     public void user_clicks_first_category_link_under_women_category() {
-
+        for (int i = 0; i <2 ; i++) {
+            homePage.womenCategoryButton.click();
+            homePage.womenCategoryList.get(0).click();
+            Driver.getDriver().navigate().refresh();
+        }
     }
     @Then("user verifies category page is displayed and confirm text {string}")
-    public void user_verifies_category_page_is_displayed_and_confirm_text(String string) {
-
+    public void user_verifies_category_page_is_displayed_and_confirm_text(String womenDressHeader) {
+        assertEquals(productPage.womenDressProductsHeaderText.getText(), womenDressHeader);
     }
     @Then("user clicks on first sub-category link of man category on the left side bar")
     public void user_clicks_on_first_sub_category_link_of_man_category_on_the_left_side_bar() {
-
+        homePage.menCategoryButton.click();
+        homePage.menCategoryList.get(0).click();
     }
 
 }
