@@ -76,4 +76,4 @@
       And user clicks first category link under women category
       Then user verifies category page is displayed and confirm text "WOMEN - DRESS PRODUCTS"
       And user clicks on first sub-category link of man category on the left side bar
-
+      Then user verifies category page is displayed and confirm text "MEN - TSHIRTS PRODUCTS"

@@ -1,7 +1,6 @@
 package com.automationexercise.pages;
 
 import com.automationexercise.utilities.Driver;
-import io.opentelemetry.api.baggage.propagation.W3CBaggagePropagator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -41,8 +40,8 @@ public class ProductPage {
     @FindBy (xpath = "//*[text()='Cart is empty!']")
     public WebElement cartEmptyText;
 
-    @FindBy (xpath = "//*[text()='Women - Dress Products']")
-    public WebElement womenDressProductsHeaderText;
+    @FindBy (css = ".title.text-center")
+    public WebElement categoryHeaderText;
 
 
 
