@@ -133,4 +133,17 @@ public class ProductPageStepDefinitions {
         homePage.menCategoryList.get(0).click();
     }
 
+    @When("user clicks on products button")
+    public void user_clicks_on_products_button() {
+
+    }
+    @Then("user clicks on {int}. brand name on left side bar")
+    public void user_clicks_on_brand_name_on_left_side_bar(Integer int1) {
+
+    }
+    @Then("user verifies that is navigated to brand page")
+    public void user_verifies_that_is_navigated_to_brand_page() {
+
+    }
+
 }

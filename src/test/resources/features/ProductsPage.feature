@@ -82,3 +82,9 @@
     Scenario:user should be able to see brands on the left side bar in the product page
     and can navigate brand page
       Given user goes to automationexercise url
+      When user clicks on products button
+      Then user clicks on 1. brand name on left side bar
+      And user verifies that is navigated to brand page
+      Then user clicks on 2. brand name on left side bar
+      And user verifies that is navigated to brand page
+
