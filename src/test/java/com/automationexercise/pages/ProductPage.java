@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class ProductPage {
 
     @FindBy (css = "textarea[class='form-control']")
@@ -42,6 +44,9 @@ public class ProductPage {
 
     @FindBy (css = ".title.text-center")
     public WebElement categoryHeaderText;
+
+    @FindBy (xpath = "//div[@class='brands-name']//a")
+    public List<WebElement> brandsLinkList;
 
 
 

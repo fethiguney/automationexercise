@@ -21,6 +21,9 @@ public class Driver {
 
         if (driver==null) {
             switch (ConfigReader.getProperty("browser")){
+                case "chrome"    :
+                    driver=new ChromeDriver();
+                    break;
                 case "edge"    :
                     driver=new EdgeDriver();
                     break;
@@ -30,11 +33,8 @@ public class Driver {
                 case "safari"  :
                     driver=new SafariDriver();
                     break;
-                case "headless-chrome":
-                    driver=new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-                default:
-                    driver=new ChromeDriver();
+               // case "headless-chrome":
+
 
             }
             driver.manage().window().maximize();

@@ -179,13 +179,6 @@ public class HomePage {
     public List<WebElement> menCategoryList;
 
 
-
-
-
-   
-
-
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(), this);
+    public HomePage() { PageFactory.initElements(Driver.getDriver(), this);
     }
 }

@@ -13,8 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HomePageStepDefinitions {
 
-    HomePage homePage =new HomePage();
-    LoginPage loginPage=new LoginPage();
+
 
     @Given("user goes to automationexercise url")
     public void user_goes_to_automationexercise_url() {
@@ -24,6 +23,9 @@ public class HomePageStepDefinitions {
     public void user_verifies_homepage_is_visible() {
         assertEquals(ConfigReader.getProperty("automationExercise"), Driver.getDriver().getCurrentUrl());
     }
+    HomePage homePage=new HomePage();
+    LoginPage loginPage=new LoginPage();
+
     @Then("click on signup and login button")
     public void click_on_signup_and_login_button() {
         homePage.linkSignupLogin.click();
