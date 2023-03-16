@@ -1,7 +1,8 @@
 
+  @productpage @regression
   Feature: Automation Exercise Products Page UI Test
 
-    @productPagetestcase01 @regression @smoke
+    @productPagetestcase01  @smoke
     Scenario:user should be able to add products to cart successfully
       Given user goes to automationexercise url
       When user clicks products page and is navigated all product page
@@ -11,7 +12,7 @@
       And user clicks view cart button
       Then user verifies both two product are added to cart
 
-    @productPagetestcase02 @regression @smoke
+    @productPagetestcase02  @smoke
     Scenario:user should be able to select product from home page and then add to cart
       Given user goes to automationexercise url
       When user clicks view product for the 3. product on home page
@@ -33,7 +34,7 @@
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
 
-    @productPagetestcase04 @regression @E2E @smoke
+    @productPagetestcase04  @E2E @smoke
     Scenario:user should be place order a product after register to the platform
       Given user goes to automationexercise url
       When click on signup and login button
@@ -47,7 +48,7 @@
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
 
-    @productPagetestcase05 @regression @E2E @smoke
+    @productPagetestcase05  @E2E @smoke
     Scenario:user should be able to place order after successfully login to the platform
       Given user goes to automationexercise url
       When click on signup and login button
@@ -60,7 +61,7 @@
       Then user enters payment details and clicks pay and confirm order button
       And user clicks delete account button then click continue button
 
-    @productPagetestcase06 @regression
+    @productPagetestcase06
     Scenario:user should be able to remove products from cart
       Given user goes to automationexercise url
       Then user hovers over product 1 and click add to cart button
@@ -68,7 +69,7 @@
       Then user clicks x button to remove product from the cart
       And user verifies cart page is empty
 
-    @productPagetestcase07 @regression
+    @productPagetestcase07
     Scenario:user should be able to select a category and view products
     that are related to the category
       Given user goes to automationexercise url
@@ -78,7 +79,7 @@
       And user clicks on first sub-category link of man category on the left side bar
       Then user verifies category page is displayed and confirm text "MEN - TSHIRTS PRODUCTS"
 
-    @productPagetestcase08 @regression
+    @productPagetestcase08
     Scenario:user should be able to see brands on the left side bar in the product page
     and can navigate brand page
       Given user goes to automationexercise url
