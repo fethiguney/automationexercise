@@ -131,6 +131,8 @@ public class HomePageStepDefinitions {
     @When("user clicks test cases button")
     public void user_clicks_test_cases_button() {
         homePage.linkTestCases.click();
+        Driver.getDriver().navigate().refresh();
+        homePage.linkTestCases.click();
     }
     @Then("user is navigated test cases page successfully")
     public void user_is_navigated_test_cases_page_successfully() {

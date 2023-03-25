@@ -35,8 +35,6 @@ public class Driver {
                 case "safari"  :
                     driver=new SafariDriver();
                     break;
-               // case "headless-chrome":
-
 
             }
             driver.manage().window().maximize();

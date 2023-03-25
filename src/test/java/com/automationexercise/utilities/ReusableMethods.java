@@ -2,6 +2,8 @@ package com.automationexercise.utilities;
 
 import com.automationexercise.pages.LoginPage;
 import com.github.javafaker.Faker;
+import io.cucumber.java.Scenario;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -9,7 +11,14 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -136,4 +145,16 @@ public class ReusableMethods {
         jse.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    public static String screenshotAddReport() throws IOException {
+        TakesScreenshot screenshot = (TakesScreenshot) Driver.getDriver();
+        File source = screenshot.getScreenshotAs(OutputType.FILE);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss_SSS");
+        String fileName = "screenshot_" + LocalDateTime.now().format(formatter) + ".png";
+        Path destination = Paths.get("target/screenshots/" + fileName);
+        Files.createDirectories(destination.getParent());
+        Files.copy(source.toPath(), destination);
+
+        return destination.toString();
+    }
 }
