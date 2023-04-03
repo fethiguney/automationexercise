@@ -112,9 +112,17 @@ public class ProductPageStepDefinitions {
     public void user_verifies_cart_page_is_empty() {
         productPage.cartEmptyText.isDisplayed();
     }
-    @Then("user clicks women category")
-    public void user_clicks_women_category() {
-        homePage.womenCategoryButton.click();
+    @Then("^user clicks (men|women) category$")
+    public void user_clicks_category(String category) {
+        switch (category){
+            case ("men") :
+                homePage.menCategoryButton.click();
+                break;
+            case ("women") :
+                homePage.womenCategoryButton.click();
+                break;
+        }
+
     }
     @Then("user clicks first category link under women category")
     public void user_clicks_first_category_link_under_women_category() {
